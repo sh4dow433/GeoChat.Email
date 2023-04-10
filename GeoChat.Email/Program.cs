@@ -1,14 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.DependencyInjection;
+using GeoChat.Email.Api.RabbitMqEventBus.Extensions;
+using Microsoft.Extensions.Hosting;
 
 namespace GeoChat.Email;
 
 public class Program
 {
-    public static void Main(string[] args)
+    public static async void Main(string[] args)
     {
+        using IHost host = Host.CreateDefaultBuilder(args)
+            .ConfigureServices(services =>
+            {
+                //TODO: register handlers and email client;
+                services.RegisterEventBus();
+            })
+            .Build();
+        await host.StartAsync();
     }
 }
