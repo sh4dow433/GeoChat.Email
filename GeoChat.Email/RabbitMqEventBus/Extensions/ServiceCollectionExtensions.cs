@@ -1,9 +1,9 @@
-﻿using GeoChat.Email.Api.EventBus;
-using GeoChat.Email.Api.RabbitMqEventBus.ConnectionManager;
-using GeoChat.Email.Api.RabbitMqEventBus.EventsManager;
+﻿using GeoChat.Email.EventBus;
+using GeoChat.Email.RabbitMqEventBus.ConnectionManager;
+using GeoChat.Email.RabbitMqEventBus.EventsManager;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace GeoChat.Email.Api.RabbitMqEventBus.Extensions;
+namespace GeoChat.Email.RabbitMqEventBus.Extensions;
 
 public static class ServiceCollectionExtensions
 {

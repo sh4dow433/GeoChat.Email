@@ -1,6 +1,6 @@
-﻿using GeoChat.Email.Api.EventBus.Events;
+﻿using GeoChat.Email.EventBus.Events;
 
-namespace GeoChat.Email.Api.EventBus.EventHandlers;
+namespace GeoChat.Email.EventBus.EventHandlers;
 
 public interface IEventHandler<TEvent> where TEvent : BaseEvent
 {

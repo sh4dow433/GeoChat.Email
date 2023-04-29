@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using GeoChat.Email.Api.RabbitMqEventBus.Extensions;
+using GeoChat.Email.RabbitMqEventBus.Extensions;
 using Microsoft.Extensions.Hosting;
 
 namespace GeoChat.Email;

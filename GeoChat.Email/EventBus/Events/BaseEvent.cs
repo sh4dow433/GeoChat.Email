@@ -1,4 +1,4 @@
-﻿namespace GeoChat.Email.Api.EventBus.Events;
+﻿namespace GeoChat.Email.EventBus.Events;
 
 public abstract class BaseEvent
 {

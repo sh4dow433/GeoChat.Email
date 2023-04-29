@@ -1,14 +1,14 @@
-﻿using GeoChat.Email.Api.EventBus;
-using GeoChat.Email.Api.EventBus.EventHandlers;
-using GeoChat.Email.Api.EventBus.Events;
-using GeoChat.Email.Api.RabbitMqEventBus.ConnectionManager;
-using GeoChat.Email.Api.RabbitMqEventBus.EventsManager;
+﻿using GeoChat.Email.EventBus;
+using GeoChat.Email.EventBus.EventHandlers;
+using GeoChat.Email.EventBus.Events;
+using GeoChat.Email.RabbitMqEventBus.ConnectionManager;
+using GeoChat.Email.RabbitMqEventBus.EventsManager;
 using Microsoft.Extensions.DependencyInjection;
 using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
 
-namespace GeoChat.Email.Api.RabbitMqEventBus;
+namespace GeoChat.Email.RabbitMqEventBus;
 
 internal class EventBus : IEventBus
 {

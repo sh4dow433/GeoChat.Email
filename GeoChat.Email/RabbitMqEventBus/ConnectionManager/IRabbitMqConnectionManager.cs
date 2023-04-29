@@ -1,7 +1,7 @@
 ﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace GeoChat.Email.Api.RabbitMqEventBus.ConnectionManager;
+namespace GeoChat.Email.RabbitMqEventBus.ConnectionManager;
 
 public interface IRabbitMqConnectionManager : IDisposable
 {

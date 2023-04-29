@@ -1,4 +1,4 @@
-﻿namespace GeoChat.Email.Api.RabbitMqEventBus.EventsManager;
+﻿namespace GeoChat.Email.RabbitMqEventBus.EventsManager;
 
 public record EventDetails(string Exchange,
         string ExchangeType,

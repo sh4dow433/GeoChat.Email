@@ -1,4 +1,4 @@
-﻿namespace GeoChat.Email.Api.RabbitMqEventBus.ConnectionManager;
+﻿namespace GeoChat.Email.RabbitMqEventBus.ConnectionManager;
 
 public class MessageEventArgs : EventArgs
 {

@@ -4,7 +4,7 @@ using RabbitMQ.Client.Events;
 using System.Text;
 using System.Threading.Channels;
 
-namespace GeoChat.Email.Api.RabbitMqEventBus.ConnectionManager;
+namespace GeoChat.Email.RabbitMqEventBus.ConnectionManager;
 
 public partial class RabbitMqConnectionManager : IRabbitMqConnectionManager
 {

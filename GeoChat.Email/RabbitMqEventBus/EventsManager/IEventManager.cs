@@ -1,7 +1,7 @@
-﻿using GeoChat.Email.Api.EventBus.EventHandlers;
-using GeoChat.Email.Api.EventBus.Events;
+﻿using GeoChat.Email.EventBus.EventHandlers;
+using GeoChat.Email.EventBus.Events;
 
-namespace GeoChat.Email.Api.RabbitMqEventBus.EventsManager;
+namespace GeoChat.Email.RabbitMqEventBus.EventsManager;
 
 public interface IEventManager
 {
