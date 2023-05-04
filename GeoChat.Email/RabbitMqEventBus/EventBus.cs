@@ -98,9 +98,9 @@ internal class EventBus : IEventBus
         var eventType = _eventManager.GetEventTypeFromRoutingKey(exchange, routingKey);
         foreach (var handlerType in _eventManager.GetHandlers(eventType.Name))
         {
-            var handler = scope.ServiceProvider.GetService(handlerType);
-            var actualEvent = JsonSerializer.Deserialize(body, eventType);
-            var handlerConcreteType = typeof(IEventHandler<>).MakeGenericType(handlerType);
+            object? handler = scope.ServiceProvider.GetService(handlerType);
+            object? actualEvent = JsonSerializer.Deserialize(body, eventType);
+            Type? handlerConcreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
             if (handler == null || actualEvent == null || handlerConcreteType == null)
             {
                 throw new Exception("Couldn't find or couldn't build the handler");
