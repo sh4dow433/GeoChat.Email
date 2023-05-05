@@ -4,16 +4,22 @@ using Microsoft.Extensions.Hosting;
 using GeoChat.Email.EventBus.EventHandlers;
 using GeoChat.Email.EventBus.Events;
 using GeoChat.Email.EventBus;
+using Microsoft.Extensions.Configuration;
 
 namespace GeoChat.Email;
 
 public class Program
 {
-    public static async void Main(string[] args)
+    public static async Task Main(string[] args)
     {
         using IHost host = Host.CreateDefaultBuilder(args)
             .ConfigureServices(services =>
             {
+                IConfiguration config = new ConfigurationBuilder()
+                    .AddJsonFile("appsettings.json")
+                    .AddEnvironmentVariables()
+                    .Build();
+                services.AddSingleton<IConfiguration>(config);
                 //TODO: add email client;
 
                 // event bus
@@ -21,7 +27,8 @@ public class Program
 
                 // event handler
                 // comment this line if u dont have a working rabbitmq connection
-                services.AddTransient<IEventHandler<NewAccountCreatedEvent>, NewAccountCreatedEventHandler>();
+
+                services.AddTransient<NewAccountCreatedEventHandler>();
             })
             .Build();
 
@@ -32,5 +39,6 @@ public class Program
         ///
 
         await host.StartAsync();
+        Console.Read();
     }
 }
