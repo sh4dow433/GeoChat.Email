@@ -9,6 +9,10 @@ namespace GeoChat.Email.EventBus.EventHandlers;
 
 internal class NewAccountCreatedEventHandler : IEventHandler<NewAccountCreatedEvent>
 {
+    public NewAccountCreatedEventHandler()
+    {
+
+    }
     public Task HandleAsync(NewAccountCreatedEvent @event)
     {
         throw new NotImplementedException();
