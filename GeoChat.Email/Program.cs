@@ -27,7 +27,6 @@ public class Program
 
                 // event handler
                 // comment this line if u dont have a working rabbitmq connection
-
                 services.AddTransient<NewAccountCreatedEventHandler>();
             })
             .Build();
