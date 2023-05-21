@@ -10,12 +10,15 @@ namespace GeoChat.Email.EventBus.EventHandlers;
 
 internal class NewAccountCreatedEventHandler : IEventHandler<NewAccountCreatedEvent>
 {
+    private string fromMail;
+    private string fromPassword;
+
     public NewAccountCreatedEventHandler(IConfiguration configuration)
     {
         _configuration = configuration;
 		
-		var fromMail = _configuration["Email:fromMail"];
-		var fromPassword = _configuration["Email:fromPassword"];
+		fromMail = _configuration["Email:fromMail"];
+		fromPassword = _configuration["Email:fromPassword"];
     }
     public Task HandleAsync(NewAccountCreatedEvent @event)
     {
