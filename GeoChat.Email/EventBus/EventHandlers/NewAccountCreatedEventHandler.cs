@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Mail;
+using Microsoft.Extensions.Configuration;
+using System.Net;
 
 namespace GeoChat.Email.EventBus.EventHandlers;
 
