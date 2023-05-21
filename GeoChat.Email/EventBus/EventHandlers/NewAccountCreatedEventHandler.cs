@@ -23,9 +23,9 @@ internal class NewAccountCreatedEventHandler : IEventHandler<NewAccountCreatedEv
         MailMessage message = new MailMessage();
         message.From = new MailAddress(fromMail);
         message.Subject = "Welcome to GeoChat";
-        message.To.Add(new MailAddress(event.Email));
+        message.To.Add(new MailAddress(@event.Email));
 
-        string welcomeMessage = $"Dear {event.UserName},\n\n" +
+        string welcomeMessage = $"Dear {@event.UserName},\n\n" +
                                 "Welcome to GeoChat!\n\n" +
                                 "We are delighted to have you as a new member of our community. GeoChat is a vibrant platform where you can connect with people, share experiences, and explore exciting conversations.\n\n" +
                                 "If you have any questions or need assistance, please don't hesitate to reach out to our support team. They are always ready to help.\n\n" +
