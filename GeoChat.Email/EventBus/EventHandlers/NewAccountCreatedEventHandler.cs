@@ -14,11 +14,9 @@ internal class NewAccountCreatedEventHandler : IEventHandler<NewAccountCreatedEv
     private string fromPassword;
 
     public NewAccountCreatedEventHandler(IConfiguration configuration)
-    {
-        _configuration = configuration;
-		
-		fromMail = _configuration["Email:fromMail"];
-		fromPassword = _configuration["Email:fromPassword"];
+    {		
+		fromMail = configuration["Email:fromMail"];
+		fromPassword = configuration["Email:fromPassword"];
     }
     public Task HandleAsync(NewAccountCreatedEvent @event)
     {
