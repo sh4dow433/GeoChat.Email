@@ -44,5 +44,6 @@ internal class NewAccountCreatedEventHandler : IEventHandler<NewAccountCreatedEv
         };
 
         smtpClient.Send(message);
+        return Task.CompletedTask;
     }
 }
